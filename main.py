@@ -30,6 +30,7 @@ with open('image.png','wb') as f:
 if platform.system() == 'Darwin':
 	subprocess.Popen(cmd%f"{os.getcwd()}/image.png", shell=True)
 	subprocess.call(["killall Dock"], shell=True)
+
 if platform.system() == 'Windows':
 	path = os.getcwd()+'\\image.png'
 	ctypes.windll.user32.SystemParametersInfoW(20,0,path,0)
