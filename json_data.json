@@ -1,6 +1,5 @@
 {
-  "query": {
-      "number": 1,
-      "salad": "potato"
+  "urls": {
+      "background": "https://i.imgur.com/HYvleEM.jpeg"
   }
 }
