@@ -17,7 +17,6 @@ r = requests.get('https://mvpjoe.github.io/ground-changer/json_data.json').json(
 url = r['urls']['background']
 print(url)
 
-
 # Download the image
 r = requests.get(url, stream=True)
 r.raw.decode_content = True
@@ -29,7 +28,7 @@ with open('image.png','wb') as f:
 
 # Set image as desktop background
 if platform.system() == 'Darwin':
-	subprocess.Popen(cmd%"image.png", shell=True)
+	subprocess.Popen(cmd%f"{os.getcwd()}/image.png", shell=True)
 	subprocess.call(["killall Dock"], shell=True)
 if platform.system() == 'Windows':
 	path = os.getcwd()+'\\image.png'
