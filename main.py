@@ -10,6 +10,7 @@ cmd = """/usr/bin/osascript<<END
 tell application "Finder"
 set desktop picture to POSIX file "%s"
 end tell
+END"""
 
 # Get image from Github Pages json page
 r = requests.get('https://mvpjoe.github.io/ground-changer/json_data.json').json()
